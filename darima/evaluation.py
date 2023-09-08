@@ -19,7 +19,8 @@ from pyspark.sql.functions import pandas_udf, PandasUDFType
 ##--------------------------------------------------------------------------------------
 # R version
 ##--------------------------------------------------------------------------------------
-eval_func_rcode = zipfile.ZipFile(pathlib.Path(__file__).parents[1]).open("darima/R/eval_func.R").read().decode("utf-8")
+# eval_func_rcode = zipfile.ZipFile(pathlib.Path(__file__).parents[1]).open("darima/R/eval_func.R").read().decode("utf-8")
+eval_func_rcode = open("/home/ole/IdeaProjects/darima/darima/R/eval_func.R").read()
 robjects.r.source(exprs=rpy2.rinterface.parse(eval_func_rcode), verbose=False)
 eval_func=robjects.r['eval_func']
 

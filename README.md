@@ -1,3 +1,5 @@
+CHECK folder "mycode" -> README.md for my instructions
+
 # `darima`
 
 Distributed ARIMA Models implemented with Apache Spark
